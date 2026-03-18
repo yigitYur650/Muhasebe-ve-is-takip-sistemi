@@ -1,16 +1,47 @@
-# React + Vite
+# Muhasebe ve Is Takip Sistemi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, isletmelerin finansal verilerini yonetmek, satis ve gider takibi yapmak ve isletme verimliligini analiz etmek amaciyla gelistirilmis bir web uygulamasidir. Ozellikle perde ve tekstil sektorundeki isletmelerin ihtiyaclarina yonelik ozellestirilmis moduller icermektedir.
 
-Currently, two official plugins are available:
+## Proje Hakkinda
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Uygulama, modern web teknolojileri kullanilarak full-stack bir mimari ile insa edilmistir. Isletme sahiplerinin gunluk islemlerini kolayca kayit altina almasini, gecmise donuk verileri raporlamasini ve dashboard uzerinden finansal durumu izlemesini saglar.
 
-## React Compiler
+## Teknik Detaylar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- React: Kullanici arayuzu bilesenlerinin gelistirilmesi.
+- Vite: Hizli gelistirme ortami ve build islemleri.
+- Tailwind CSS: Modern ve responsive tasarim katmani.
+- Recharts: Satis ve harcama verilerinin grafiksel gosterimi.
+- Lucide React: Uygulama ici ikon bilesenleri.
 
-## Expanding the ESLint configuration
+### Backend
+- Go (Golang): Yuksek performansli API sunucusu.
+- Fiber v2: Hizli ve moduler web framework yapisi.
+- Go Modules: Bagimlilik yonetimi.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Klasor Yapisi
+
+- perde-backend/: Isletme mantiginin ve finansal API uclarinin yonetildigi Go projesi.
+- personel-takip/: Calisan verimliligi ve personel yonetimi icin ozellesmis moduller.
+- src/: React frontend kaynak kodlari (Bilesenler, sayfalar ve servisler).
+- public/: Statik varliklar ve dosyalar.
+
+## Kurulum ve Calistirma
+
+### Frontend Islemleri
+1. Ana dizine gidin.
+2. Bagimliliklari yukleyin:
+   npm install
+3. Uygulamayi gelistirme modunda baslatin:
+   npm run dev
+
+### Backend Islemleri
+1. perde-backend dizinine gidin.
+2. Gerekli Go paketlerini yukleyin:
+   go mod tidy
+3. Sunucuyu calistirin:
+   go run main.go
+
+## Not
+Bu proje aktif gelistirme asamasindadir ve isletme gereksinimlerine gore ozellestirilmistir.
